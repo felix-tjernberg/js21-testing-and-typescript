@@ -7,7 +7,7 @@ interface UserProps {
   Role: Roles
 }
 
-export const User: React.FC<UserProps> = ({ Name, Age, Role }: UserProps) => {
+export const User: React.FC<UserProps> = ({ Name, Age, Role }) => {
   return (
     <div>
       <h2>{Name}</h2>
