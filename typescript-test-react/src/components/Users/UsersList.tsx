@@ -1,5 +1,5 @@
 import React from 'react'
-import { UserProps } from '../Interfaces/UserProps'
+import { UserProps } from '../../Interfaces/UserProps'
 
 const UserList = (users: UserProps[]) => {
   return (
