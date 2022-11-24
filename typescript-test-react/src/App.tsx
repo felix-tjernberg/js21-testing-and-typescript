@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import './App.css'
 import { SubmitButton } from './components/buttons/submit/submitButton'
 import RoleDropDown from './components/RoleDropDown/RoleDropDown'
-import { UserComponent } from './components/Users/Users'
+import User from './components/UsersList/User'
 import Roles from './Enums/Roles'
 import { IButtonProps } from './Interfaces/IButtonProps'
 import { UserProps } from './Interfaces/UserProps'
@@ -79,7 +79,7 @@ function App() {
           />
         </form>
         <RoleDropDown />
-        <UserComponent {...userProps} />
+        <User {...userProps} />
         <SubmitButton {...buttonProps}> Add </SubmitButton>
       </header>
     </div>
