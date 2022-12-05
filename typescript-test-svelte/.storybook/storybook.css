@@ -1,0 +1,18 @@
+html,
+body {
+  overflow: hidden;
+}
+
+#storybook-docs .root-container {
+  display: flex;
+  place-content: center;
+  height: auto;
+  width: auto;
+}
+
+.root-container {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  width: 100vw;
+}
