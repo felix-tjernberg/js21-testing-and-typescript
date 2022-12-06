@@ -14,12 +14,5 @@ module.exports = {
   },
   docs: {
     docsPage: true
-  },
-  webpackFinal: async (config, { configType }) => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      $lib: path.resolve(__dirname, '../src/lib')
-    }
-    return config
   }
 }
