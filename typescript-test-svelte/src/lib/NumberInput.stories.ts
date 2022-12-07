@@ -42,11 +42,21 @@ Story2.play = async ({ canvasElement }) => {
 
 export const Story3: Story = {}
 Story3.args = {
-  //@ts-ignore
+  //@ts-ignore // This is a chaos test
   value: 'A string'
 }
 Story3.storyName = 'Value is string'
 Story3.play = async ({ canvasElement }) => {
+  const input = canvasElement.querySelector('input')
+  await expect(input.value).toBe('0')
+}
+
+export const Story4: Story = {}
+Story4.args = {
+  value: null
+}
+Story4.storyName = 'Value is null'
+Story4.play = async ({ canvasElement }) => {
   const input = canvasElement.querySelector('input')
   await expect(input.value).toBe('0')
 }

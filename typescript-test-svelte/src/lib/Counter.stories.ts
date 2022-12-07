@@ -36,11 +36,21 @@ Story2.play = async ({ canvasElement }) => {
 
 export const Story3: Story = {}
 Story3.args = {
-  //@ts-ignore
+  //@ts-ignore // This is a chaos test
   count: 'A string'
 }
 Story3.storyName = 'Count is string'
 Story3.play = async ({ canvasElement }) => {
+  const button = canvasElement.querySelector('button')
+  await expect(button.textContent).toBe('count is 0')
+}
+
+export const Story4: Story = {}
+Story4.args = {
+  count: null
+}
+Story4.storyName = 'Count is null'
+Story4.play = async ({ canvasElement }) => {
   const button = canvasElement.querySelector('button')
   await expect(button.textContent).toBe('count is 0')
 }

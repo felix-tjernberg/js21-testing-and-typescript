@@ -5,7 +5,7 @@
 
   export let count: number = 0
 
-  if (!valueSchema.safeParse(count).success) count = DEFAULT_VALUE
+  $: if (!valueSchema.safeParse(count).success) count = DEFAULT_VALUE
 
   const increment = () => {
     count += 1
