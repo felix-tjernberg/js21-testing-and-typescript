@@ -7,20 +7,20 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 type Story = StoryObj<Counters>
 
 const meta: Meta<Counters> = {
-  title: 'Components/Counters',
+  title: 'Components/Composition/Counters',
   component: Counters,
   tags: ['docsPage'],
   parameters: {
     docs: {
       description: {
-        component: 'Component that renders multiple counters next to each other'
+        component: 'A list of counter components'
       }
     }
   }
 }
 export default meta
 
-export const Default: Story = {}
+export const DefaultState: Story = {}
 
 export const Story1: Story = {
   args: {

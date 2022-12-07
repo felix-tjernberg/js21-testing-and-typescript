@@ -5,20 +5,20 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 type Story = StoryObj<NumberInput>
 
 const meta: Meta<NumberInput> = {
-  title: 'Components/NumberInput',
+  title: 'Components/Basic/NumberInput',
   component: NumberInput,
   tags: ['docsPage'],
   parameters: {
     docs: {
       description: {
-        component: 'A simple component that renders a button and a counter'
+        component: 'Number input element'
       }
     }
   }
 }
 export default meta
 
-export const Default: Story = {}
+export const DefaultState: Story = {}
 
 export const Story1: Story = {}
 Story1.args = {

@@ -5,14 +5,21 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 type Story = StoryObj<Counter>
 
 const meta: Meta<Counter> = {
-  title: 'Components/Counter',
+  title: 'Components/Basic/Counter',
   component: Counter,
-  tags: ['docsPage']
+  tags: ['docsPage'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Button that increments and shows a counter'
+      }
+    }
+  }
 }
 
 export default meta
 
-export const Default: Story = {}
+export const DefaultState: Story = {}
 
 export const Story1: Story = {}
 Story1.args = {
