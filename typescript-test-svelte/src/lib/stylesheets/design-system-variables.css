@@ -1,0 +1,72 @@
+:root {
+  --color-100: hsl(0, 0%, 98%);
+  --color-150: hsl(0, 0%, 90%);
+  --color-200: hsl(0, 0%, 75%);
+  --color-300: hsl(0, 0%, 50%);
+  --color-400: hsl(0, 0%, 25%);
+  --color-450: hsl(0, 0%, 15%);
+  --color-500: hsl(0, 0%, 10%);
+
+  --stroke-width-100: 1px;
+  --stroke-width-200: 2px;
+  --stroke-width-300: 4px;
+  --stroke-width-400: 8px;
+  --stroke-width-500: 16px;
+
+  --spacing-100: 0.25em;
+  --spacing-200: 0.5em;
+  --spacing-300: 1em;
+  --spacing-400: 2em;
+  --spacing-500: 4em;
+
+  --spacing-100: 0.8em;
+  --spacing-200: 1em;
+  --spacing-300: 1.25em;
+  --spacing-400: 1.563em;
+  --spacing-500: 1.953em;
+  --spacing-600: 2.441em;
+
+  --border-radius-100: 0.25em;
+  --border-radius-200: 0.5em;
+  --border-radius-300: 1em;
+  --border-radius-400: 2em;
+  --border-radius-500: 4em;
+
+  --font-size-100: 0.8em;
+  --font-size-200: 1em;
+  --font-size-300: 1.25em;
+  --font-size-400: 1.563em;
+  --font-size-500: 1.953em;
+  --font-size-600: 2.441em;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-500: hsl(0, 0%, 98%);
+    --color-450: hsl(0, 0%, 80%);
+    --color-400: hsl(0, 0%, 75%);
+    --color-300: hsl(0, 0%, 50%);
+    --color-200: hsl(0, 0%, 25%);
+    --color-150: hsl(0, 0%, 15%);
+    --color-100: hsl(0, 0%, 10%);
+  }
+}
+
+[data-dark-mode='true'] * {
+  --color-500: hsl(0, 0%, 98%);
+  --color-450: hsl(0, 0%, 80%);
+  --color-400: hsl(0, 0%, 75%);
+  --color-300: hsl(0, 0%, 50%);
+  --color-200: hsl(0, 0%, 25%);
+  --color-150: hsl(0, 0%, 15%);
+  --color-100: hsl(0, 0%, 10%);
+}
+[data-dark-mode='false'] * {
+  --color-100: hsl(0, 0%, 98%);
+  --color-150: hsl(0, 0%, 80%);
+  --color-200: hsl(0, 0%, 75%);
+  --color-300: hsl(0, 0%, 50%);
+  --color-400: hsl(0, 0%, 25%);
+  --color-450: hsl(0, 0%, 15%);
+  --color-500: hsl(0, 0%, 10%);
+}

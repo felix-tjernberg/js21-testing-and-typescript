@@ -1,5 +1,5 @@
 <script>
-  import '$lib/stylesheets/global.css'
+  import '$lib/stylesheets/styles.css'
   import './storybook.css'
 </script>
 

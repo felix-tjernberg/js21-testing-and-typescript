@@ -1,0 +1,21 @@
+.flex {
+  display: flex;
+}
+.column {
+  flex-direction: column;
+}
+.justify-center {
+  justify-content: center;
+}
+.items-center {
+  align-items: center;
+}
+.gap-600 {
+  gap: var(--spacing-600);
+}
+.text-center {
+  text-align: center;
+}
+.text-full-width {
+  max-width: 100%;
+}

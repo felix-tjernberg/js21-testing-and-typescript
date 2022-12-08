@@ -9,13 +9,22 @@ Our system builds on weights for headings, body text, and other elements. We use
 __Below is an overview of the system__
 `
 const BORDERS_DOC_STRING = `
-Border
+Border/Strokes
 `
 const COLORS_DOC_STRING = `
-Colors
+Our color system works with weights and switches colors depending on light/dark mode:
+  - 100 lightest
+  - 200 lighter
+  - 300 base
+  - 400 dark
+  - 500 darkest
+
+There is also a set of accent weights that can be used for special cases like hovers:
+- 150 light accent
+- 450 dark accent
 `
 const TYPOGRAPHY_DOC_STRING = `
-typography
+Typography
 `
 const ICONS_DOC_STRING = `
 Icons
