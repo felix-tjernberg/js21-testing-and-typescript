@@ -22,6 +22,8 @@ Our color system works with weights and switches colors depending on light/dark 
 There is also a set of accent weights that can be used for special cases like hovers:
 - 150 light accent
 - 450 dark accent
+
+To pick a color use \`var(--color-XXX)\` where XXX is the weight you want to use. For example \`var(--color-300)\` will give you the base color.
 `
 const TYPOGRAPHY_DOC_STRING = `
 Typography
