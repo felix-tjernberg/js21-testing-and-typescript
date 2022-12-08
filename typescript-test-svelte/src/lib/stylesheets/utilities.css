@@ -19,3 +19,9 @@
 .text-full-width {
   max-width: 100%;
 }
+.text-enlarge {
+  font-size: calc(1em * 1.25);
+}
+.text-line-height-1-1 {
+  line-height: 1.1;
+}

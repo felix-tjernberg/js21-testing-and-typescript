@@ -8,31 +8,44 @@ Our system builds on weights for headings, body text, and other elements. We use
 
 __Below is an overview of the system__
 `
-const BORDERS_DOC_STRING = `
-Border/Strokes
-`
 const COLORS_DOC_STRING = `
-Our color system works with weights and switches colors depending on light/dark mode:
+Our color system uses weight visually on the page and switches colors depending on light/dark mode:
   - 100 lightest
   - 200 lighter
   - 300 base
-  - 400 dark
-  - 500 darkest
+  - 400 heavy
+  - 500 heaviest
 
 There is also a set of accent weights that can be used for special cases like hovers:
 - 150 light accent
-- 450 dark accent
+- 450 heavy accent
 
 To pick a color use \`var(--color-XXX)\` where XXX is the weight you want to use. For example \`var(--color-300)\` will give you the base color.
 `
 const TYPOGRAPHY_DOC_STRING = `
-Typography
+We also use weights for our type scale em were 300 is base (1rem), we let the browser decide what root em is and work from there. The scale is as follows:
+- 100: 0.75rem
+- 200: 0.8rem
+- 300: 1rem
+- 400: 1.25rem
+- 500: 1.563rem
+- 600: 1.953rem
+- 700: 2.441rem
+
+There is also a utility class to enlarge the text that is useful for headers \`.text-enlarge\`: it takes the font size and multiplies it by 1.25 (\`calc(1em * 1.25)\`)
+
+Headers have the default line height of 1.1 and the rest has 1.5
+
+Paragrafs has a max-width of 50ch by default to improve readability for dyslexic people: note that if the text is inside a flexbox or grid the paragraf might need either a width of 100% \`.text-full-width\` or margins need to be set to auto _(like how they are rendered in storybook docs it might be nicer to set margin auto so they live in the middle of the page)_
 `
-const ICONS_DOC_STRING = `
-Icons
+const BORDERS_DOC_STRING = `
+Border/Strokes
 `
 const SPACING_DOC_STRING = `
 Spacing
+`
+const ICONS_DOC_STRING = `
+Icons
 `
 
 const meta: Meta<DesignSystemPage> = {
