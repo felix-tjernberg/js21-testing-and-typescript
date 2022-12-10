@@ -18,7 +18,7 @@
 <style>
   .description-text {
     position: absolute;
-    top: calc(-1 * var(--spacing-600));
+    top: calc(-1 * var(--spacing-relative-600));
     left: 50%;
     transform: translateX(-50%);
   }
@@ -27,7 +27,7 @@
     height: 40px;
     position: relative;
     border-radius: 50%;
-    margin-top: var(--spacing-600);
+    margin-top: var(--spacing-relative-600);
   }
 
   p {
@@ -35,9 +35,9 @@
   }
   p.header {
     font-size: var(--font-size-400);
-    margin-bottom: var(--spacing-200);
+    margin-bottom: var(--spacing-relative-200);
   }
   p.header:nth-of-type(2) {
-    margin-top: var(--spacing-600);
+    margin-top: var(--spacing-relative-600);
   }
 </style>

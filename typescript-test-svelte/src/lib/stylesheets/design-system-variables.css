@@ -13,12 +13,18 @@
   --stroke-400: 8px;
   --stroke-500: 16px;
 
-  --spacing-200: 0.8em;
-  --spacing-300: 1em;
-  --spacing-400: 1.25em;
-  --spacing-500: 1.563em;
-  --spacing-600: 1.953em;
-  --spacing-700: 2.441em;
+  --spacing-relative-200: 0.8em;
+  --spacing-relative-300: 1em;
+  --spacing-relative-400: 1.25em;
+  --spacing-relative-500: 1.563em;
+  --spacing-relative-600: 1.953em;
+  --spacing-relative-700: 2.441em;
+  --spacing-root-200: 0.8rem;
+  --spacing-root-300: 1rem;
+  --spacing-root-400: 1.25rem;
+  --spacing-root-500: 1.563rem;
+  --spacing-root-600: 1.953rem;
+  --spacing-root-700: 2.441rem;
 
   --border-radius-100: 0.25em;
   --border-radius-200: 0.5em;

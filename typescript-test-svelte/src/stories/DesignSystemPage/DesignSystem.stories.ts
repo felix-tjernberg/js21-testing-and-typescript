@@ -4,63 +4,63 @@ import { Section } from './DesignSystemPage.enum'
 type Story = StoryObj<DesignSystemPage>
 
 const OVERVIEW_DOC_STRING = `
-Our system builds on defining a weights of an styling attribute, weight means how visually heavy the element becomes on the page. We use this thought process for the whole design system, 100 is the lightest 300 is base and 500 is the heaviest
+Our system builds on defining a weights of an styling attribute, weight means how visually heavy the element becomes on the page. We use this thought process for the whole design system, \`100\` is the lightest \`300\` is base and \`500\` is the heaviest
 
 __Below is an overview of the system__
 `
 const COLORS_DOC_STRING = `
-Our color system switches colors depending on light/dark mode preference by the user and we also provide \`[darkmode="true/false"]\` to force a specific color mode
+Our color system switches colors depending on \`prefers-color-scheme\` and we also provide \`[data-dark-mode="true/false"]\` to force a specific color mode
 
 #### Weights
 The primary weights included are
-- 100 Lightest
-- 200 Light
-- 300 Base
-- 400 Heavy
-- 500 Heaviest
+- 100 \`Lightest\`
+- 200 \`Light\`
+- 300 \`Base\`
+- 400 \`Heavy\`
+- 500 \`Heaviest\`
 
 There is also a set of accent weights that can be used for special cases like hovers
-- 150 light accent
-- 450 heavy accent
+- 150 \`light accent\`
+- 450 \`heavy accent\`
 
 #### CSS Variable
-To pick a color use \`var(--color-XXX)\` _(where XXX is the weight you want to use)_
+To pick a color use \`var(--color-XXX)\` <br>_(where \`XXX\` is the weight you want to use)_
 `
 const TYPOGRAPHY_DOC_STRING = `
 ### Type scale
 
-The type scale uses 1 rem as base (weight 300) which is decided by the browser which is usually 16px, then we times 1 rem according to [the major third ratio](https://type-scale.com/) 
+The type scale uses \`1rem\` as base weight \`300\` which is decided by the browser which is usually \`16px\`, then we times \`1rem\` according to [the major third ratio](https://type-scale.com/) 
 
 The scale is as follows
-- 200: 0.8rem
-- 300: 1rem
-- 400: 1.25rem
-- 500: 1.563rem
-- 600: 1.953rem
-- 700: 2.441rem
+- 200 \`0.8rem\`
+- 300 \`1rem\`
+- 400 \`1.25rem\`
+- 500 \`1.563rem\`
+- 600 \`1.953rem\`
+- 700 \`2.441rem\`
 
-There is a couple of utility classes to enlarge/reduce jump up or down in the type scale: <br> \`.font-size-enlarge\` / \`.font-size-reduce\` <br>adding \`-X\` will increase how many steps <br>The classes takes the current font size (1em) and multiplies it by the ratio and number of steps up or down
+There is a couple of utility classes to enlarge/reduce jump up or down in the type scale: <br> \`.font-size-enlarge\` / \`.font-size-reduce\` <br>Adding a number \`-X\` to these classes will increase amount of jumps <br>The classes takes the current font size \`1em\` and multiplies it by the ratio and number of steps up or down
 
 ### Line height
 
-Headers have the default line height of 1.1 and the rest has 1.65, feel free to change this if you need to at the block level
+Headers have the default line height of \`1.1\` and the rest has \`1.65\`
 
-<section class="center-container max-width-50ch">
+<section class="width-fit-content-and-center max-width-50ch">
 ### Paragraph width
 
-Paragrafs has a max-width of 50ch by default to improve readability for dyslexic people
+Paragrafs has a \`max-width\` of \`50ch\` by default to improve readability for dyslexic people
 
-Note that because of the smaller max-width (50ch) paragrafs will not be visually balanced next to wider content <br>_(Like how the text sections are rendered in storybook docs)_
+Note that because of the smaller \`max-width\` \`50ch\` paragrafs will not be visually balanced next to wider content <br>_(Like how the text sections are rendered in storybook docs)_
 
-We recommend two solutions either widen the text if the other elements does not exceed 75ch width with the class \`.text-full-width\` <br>_(As we should never exceed ~75ch for readability sake)_ 
+We recommend two solutions either widen the text if the other elements does not exceed \`75ch\` width with the class \`.text-full-width\` <br>_(As we should never exceed \`~75ch\` for readability sake)_ 
 
-Or we could wrap the paragraf in a section with the classes \`.center-container\` and add the class \`.max-width-50ch\` to the section if the header has the potential to be wider that paragraph 50ch <br>_(Like how we have done for this section)_
+Or we could wrap the paragraf in a section with the class \`.width-fit-content-and-center\` and add the class \`.max-width-50ch\` to the section if the header has the potential to be wider that paragraph \`50ch\` <br>_(Like how we have done for this section)_
 
 ### _This is a very long header to show how the width does not exceed 50ch_
 </section>
 
 ### CSS Variable
-To pick a font size use \`var(--font-size-XXX)\` _(where XXX is the weight you want to use)_
+To pick a font size use \`var(--font-size-XXX)\` <br>_(where \`XXX\` is the weight you want to use)_
 `
 const BORDERS_DOC_STRING = `
 Borders and strokes doubles in width for every weight step with the base (300) of 4px
@@ -71,10 +71,26 @@ Borders and strokes doubles in width for every weight step with the base (300) o
 - 500: 16px
 
 ### CSS Variable
-To pick a border use \`var(--stroke-XXX)\` where XXX is the weight you want to use
+To pick a border use \`var(--stroke-XXX)\` <br>_where \`XXX\` is the weight you want to use_
 `
 const SPACING_DOC_STRING = `
-Spacing
+Spacing kan be defined either with relative spacing or root spacing and follows the same sizes and weights as the type scale
+
+The scale is as follows
+- 200 \`0.8(em or rem)\`
+- 300 \`1(em or rem)\`
+- 400 \`1.25(em or rem)\`
+- 500 \`1.563(em or rem)\`
+- 600 \`1.953(em or rem)\`
+- 700 \`2.441(em or rem)\`
+
+But in most cases we use \`1em or 1rem\` for any spacing
+
+There is also a \`.spacing-vertical-flow\` utility class that will add a margin-top of 1em to all direct child elements which creates a good visual hierarchy especially when mixing headings and paragraphs in a section <br>_(except for \`:first-child\` element or elements with \`.absolute\`)_ 
+
+### CSS Variable
+To pick a relative spacing use \`var(--spacing-relative-XXX)\` <br>And to pick a root spacing use \`var(--spacing-root-XXX)\` 
+_(where \`XXX\` is the weight you want to use)_
 `
 const ICONS_DOC_STRING = `
 Icons
@@ -100,7 +116,7 @@ Styling inside to a specific component, at this point C/U layers should have def
 
 ### Exception
 
-The one-off styles usually defined with attribute selector and are usually triggered by events like \`[darkmode="true"]\`
+The one-off styles for specific states, these are defined with any \`[data-*]\` attribute selector, usually triggered by events like setting \`[data-dark-mode="true"]\`
 
 
 ### CSS (Layers)
