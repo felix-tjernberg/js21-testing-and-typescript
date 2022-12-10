@@ -3,7 +3,7 @@
   const DEFAULT_VALUE = 0
   const valueSchema = z.number()
 
-  export let count: number = 0
+  export let count: number = DEFAULT_VALUE
 
   $: if (!valueSchema.safeParse(count).success) count = DEFAULT_VALUE
 
