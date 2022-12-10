@@ -4,27 +4,34 @@ import { Section } from './DesignSystemPage.enum'
 type Story = StoryObj<DesignSystemPage>
 
 const OVERVIEW_DOC_STRING = `
-Our system builds on weights for headings, body text, and other elements. We use a 4px baseline grid for spacing and sizing.
+Our system builds on defining a weights of an styling attribute, weight means how visually heavy the element becomes on the page. We use this thought process for the whole design system, 100 is the lightest 300 is base and 500 is the heaviest
 
 __Below is an overview of the system__
 `
 const COLORS_DOC_STRING = `
-Our color system uses weight visually on the page and switches colors depending on light/dark mode:
-  - 100 lightest
-  - 200 lighter
-  - 300 base
-  - 400 heavy
-  - 500 heaviest
+Our color system switches colors depending on light/dark mode preference by the user and we also provide \`[darkmode="true/false"]\` to force a specific color mode
+
+The primary weights included are:
+- 100 Lightest
+- 200 Light
+- 300 Base
+- 400 Heavy
+- 500 Heaviest
 
 There is also a set of accent weights that can be used for special cases like hovers:
 - 150 light accent
 - 450 heavy accent
 
-To pick a color use \`var(--color-XXX)\` where XXX is the weight you want to use. For example \`var(--color-300)\` will give you the base color.
+To pick a color use \`var(--color-XXX)\` where XXX is the weight you want to use
+
+For example \`var(--color-300)\` will give you the base color
 `
 const TYPOGRAPHY_DOC_STRING = `
-We also use weights for our type scale em were 300 is base (1rem), we let the browser decide what root em is and work from there. The scale is as follows:
-- 100: 0.75rem
+### Type scale
+
+The type scale uses 1 rem as base (weight 300) which is decided by the browser which is usually 16px, then we times 1 rem according to [the major third ratio](https://type-scale.com/) 
+
+The scale is as follows:
 - 200: 0.8rem
 - 300: 1rem
 - 400: 1.25rem
@@ -32,11 +39,25 @@ We also use weights for our type scale em were 300 is base (1rem), we let the br
 - 600: 1.953rem
 - 700: 2.441rem
 
-There is also a utility class to enlarge the text that is useful for headers \`.text-enlarge\`: it takes the font size and multiplies it by 1.25 (\`calc(1em * 1.25)\`)
+There is a couple of utility classes to enlarge/reduce the font size that is useful for headers \`.font-size-enlarge / .fornt-size-reduce\`: it takes the current font size (1em) and multiplies it by the ratio: in effect bumping the font size to the next/previous step in the scale
 
-Headers have the default line height of 1.1 and the rest has 1.5
+### Line height
 
-Paragrafs has a max-width of 50ch by default to improve readability for dyslexic people: note that if the text is inside a flexbox or grid the paragraf might need either a width of 100% \`.text-full-width\` or margins need to be set to auto _(like how they are rendered in storybook docs it might be nicer to set margin auto so they live in the middle of the page)_
+Headers have the default line height of 1.1 and the rest has 1.65, feel free to change this if you need to at the block level
+
+<section class="center-container max-width-50ch">
+### Paragraph width
+
+Paragrafs has a max-width of 50ch by default to improve readability for dyslexic people
+
+Note that because of the smaller max-width (50ch) paragrafs will not be visually balanced next to wider content <br>_(Like how the text sections are rendered in storybook docs)_
+
+We recommend two solutions either widen the text if the other elements does not exceed 75ch width with the class \`.text-full-width\` <br>_(As we should never exceed ~75ch for readability sake)_ 
+
+Or we could wrap the paragraf in a section with the classes \`.center-container\` and add the class \`.max-width-50ch\` to the section if the header has the potential to be wider that paragraph 50ch <br>_(Like how we have done for this section)_
+
+### _This is a very long header to show how the width does not exceed 50ch_
+</section>
 `
 const BORDERS_DOC_STRING = `
 Border/Strokes

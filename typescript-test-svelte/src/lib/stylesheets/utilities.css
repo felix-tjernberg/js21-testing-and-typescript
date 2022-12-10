@@ -1,4 +1,5 @@
-.flex {
+.flex,
+.flex-column {
   display: flex;
 }
 .column {
@@ -16,10 +17,20 @@
 .text-center {
   text-align: center;
 }
+.center-container {
+  width: fit-content;
+  margin: auto;
+}
+.max-width-50ch {
+  max-width: 50ch;
+}
 .text-full-width {
   max-width: 100%;
 }
-.text-enlarge {
+.font-size-enlarge {
+  font-size: calc(1em * 1.25);
+}
+.font-size-reduce {
   font-size: calc(1em * 1.25);
 }
 .text-line-height-1-1 {
