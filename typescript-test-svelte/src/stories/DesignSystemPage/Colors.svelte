@@ -1,4 +1,4 @@
-<p class="text-center text-full-width">Light mode</p>
+<p class="text-center text-full-width header">Light mode</p>
 <div class="flex justify-center gap-600">
   {#each [100, 150, 200, 300, 400, 450, 500] as weight}
     <div class="circle" style="background-color: var(--color-{weight})">
@@ -6,7 +6,7 @@
     </div>
   {/each}
 </div>
-<p class="text-center text-full-width">Dark mode</p>
+<p class="text-center text-full-width header">Dark mode</p>
 <div data-dark-mode="true" class="flex justify-center gap-600">
   {#each [100, 150, 200, 300, 400, 450, 500] as weight}
     <div class="circle" style="background-color: var(--color-{weight})">
@@ -27,5 +27,17 @@
     height: 40px;
     position: relative;
     border-radius: 50%;
+    margin-top: var(--spacing-600);
+  }
+
+  p {
+    margin: 0;
+  }
+  p.header {
+    font-size: var(--font-size-400);
+    margin-bottom: var(--spacing-200);
+  }
+  p.header:nth-of-type(2) {
+    margin-top: var(--spacing-600);
   }
 </style>
