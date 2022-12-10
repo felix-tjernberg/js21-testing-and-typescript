@@ -30,8 +30,32 @@
 .font-size-enlarge {
   font-size: calc(1em * 1.25);
 }
+.font-size-enlarge-2 {
+  font-size: calc((1em * 1.25) * 2);
+}
+.font-size-enlarge-3 {
+  font-size: calc((1em * 1.25) * 3);
+}
+.font-size-enlarge-4 {
+  font-size: calc((1em * 1.25) * 4);
+}
+.font-size-enlarge-5 {
+  font-size: calc((1em * 1.25) * 5);
+}
 .font-size-reduce {
-  font-size: calc(1em * 1.25);
+  font-size: calc(1em * 0.25);
+}
+.font-size-reduce-2 {
+  font-size: calc((1em * 0.25) * 2);
+}
+.font-size-reduce-3 {
+  font-size: calc((1em * 0.25) * 3);
+}
+.font-size-reduce-4 {
+  font-size: calc((1em * 0.25) * 4);
+}
+.font-size-reduce-5 {
+  font-size: calc((1em * 0.25) * 5);
 }
 .text-line-height-1-1 {
   line-height: 1.1;

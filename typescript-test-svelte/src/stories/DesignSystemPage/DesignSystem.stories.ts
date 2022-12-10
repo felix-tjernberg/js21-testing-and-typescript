@@ -11,27 +11,27 @@ __Below is an overview of the system__
 const COLORS_DOC_STRING = `
 Our color system switches colors depending on light/dark mode preference by the user and we also provide \`[darkmode="true/false"]\` to force a specific color mode
 
-The primary weights included are:
+#### Weights
+The primary weights included are
 - 100 Lightest
 - 200 Light
 - 300 Base
 - 400 Heavy
 - 500 Heaviest
 
-There is also a set of accent weights that can be used for special cases like hovers:
+There is also a set of accent weights that can be used for special cases like hovers
 - 150 light accent
 - 450 heavy accent
 
-To pick a color use \`var(--color-XXX)\` where XXX is the weight you want to use
-
-For example \`var(--color-300)\` will give you the base color
+#### CSS Variable
+To pick a color use \`var(--color-XXX)\` _(where XXX is the weight you want to use)_
 `
 const TYPOGRAPHY_DOC_STRING = `
 ### Type scale
 
 The type scale uses 1 rem as base (weight 300) which is decided by the browser which is usually 16px, then we times 1 rem according to [the major third ratio](https://type-scale.com/) 
 
-The scale is as follows:
+The scale is as follows
 - 200: 0.8rem
 - 300: 1rem
 - 400: 1.25rem
@@ -39,7 +39,7 @@ The scale is as follows:
 - 600: 1.953rem
 - 700: 2.441rem
 
-There is a couple of utility classes to enlarge/reduce the font size that is useful for headers \`.font-size-enlarge / .fornt-size-reduce\`: it takes the current font size (1em) and multiplies it by the ratio: in effect bumping the font size to the next/previous step in the scale
+There is a couple of utility classes to enlarge/reduce jump up or down in the type scale: <br> \`.font-size-enlarge\` / \`.font-size-reduce\` <br>adding \`-X\` will increase how many steps <br>The classes takes the current font size (1em) and multiplies it by the ratio and number of steps up or down
 
 ### Line height
 
@@ -58,9 +58,20 @@ Or we could wrap the paragraf in a section with the classes \`.center-container\
 
 ### _This is a very long header to show how the width does not exceed 50ch_
 </section>
+
+### CSS Variable
+To pick a font size use \`var(--font-size-XXX)\` _(where XXX is the weight you want to use)_
 `
 const BORDERS_DOC_STRING = `
-Border/Strokes
+Borders and strokes doubles in width for every weight step with the base (300) of 4px
+- 100: 1px
+- 200: 2px
+- 300: 4px
+- 400: 8px
+- 500: 16px
+
+### CSS Variable
+To pick a border use \`var(--stroke-XXX)\` where XXX is the weight you want to use
 `
 const SPACING_DOC_STRING = `
 Spacing
@@ -155,7 +166,7 @@ export const Story4: Story = {
     section: Section.enum.borders
   }
 }
-Story4.storyName = 'Borders'
+Story4.storyName = 'Border/Strokes'
 Story4.parameters = {
   docs: {
     description: {
