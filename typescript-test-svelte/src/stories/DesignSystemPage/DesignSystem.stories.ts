@@ -11,7 +11,7 @@ __Below is an overview of the system__
 const COLORS_DOC_STRING = `
 Our color system switches colors depending on \`prefers-color-scheme\` and we also provide \`[data-dark-mode="true/false"]\` to force a specific color mode
 
-#### Weights
+#### _Weights_
 The primary weights included are
 - 100 \`Lightest\`
 - 200 \`Light\`
@@ -23,12 +23,11 @@ There is also a set of accent weights that can be used for special cases like ho
 - 150 \`light accent\`
 - 450 \`heavy accent\`
 
-#### CSS Variable
+#### _CSS Variable_
 To pick a color use \`var(--color-XXX)\` <br>_(where \`XXX\` is the weight you want to use)_
 `
 const TYPOGRAPHY_DOC_STRING = `
-### Type scale
-
+#### _Type scale_
 The type scale uses \`1rem\` as base weight \`300\` which is decided by the browser which is usually \`16px\`, then we times \`1rem\` according to [the major third ratio](https://type-scale.com/) 
 
 The scale is as follows
@@ -41,13 +40,11 @@ The scale is as follows
 
 There is a couple of utility classes to enlarge/reduce jump up or down in the type scale: <br> \`.font-size-enlarge\` / \`.font-size-reduce\` <br>Adding a number \`-X\` to these classes will increase amount of jumps <br>The classes takes the current font size \`1em\` and multiplies it by the ratio and number of steps up or down
 
-### Line height
-
+#### _Line height_
 Headers have the default line height of \`1.1\` and the rest has \`1.65\`
 
 <section class="width-fit-content-and-center max-width-50ch">
-### Paragraph width
-
+#### _Paragraph width_
 Paragrafs has a \`max-width\` of \`50ch\` by default to improve readability for dyslexic people
 
 Note that because of the smaller \`max-width\` \`50ch\` paragrafs will not be visually balanced next to wider content <br>_(Like how the text sections are rendered in storybook docs)_
@@ -59,7 +56,7 @@ Or we could wrap the paragraf in a section with the class \`.width-fit-content-a
 ### _This is a very long header to show how the width does not exceed 50ch_
 </section>
 
-### CSS Variable
+#### _CSS Variable_
 To pick a font size use \`var(--font-size-XXX)\` <br>_(where \`XXX\` is the weight you want to use)_
 `
 const BORDERS_DOC_STRING = `
@@ -70,7 +67,7 @@ Borders and strokes doubles in width for every weight step with the base \`300\`
 - 400 \`8px\`
 - 500 \`16px\`
 
-### CSS Variable
+#### _CSS Variable_
 To pick a border use \`var(--stroke-XXX)\` <br>_where \`XXX\` is the weight you want to use_
 `
 const SPACING_DOC_STRING = `
@@ -88,7 +85,7 @@ But in most cases we use \`1em or 1rem\` for any spacing
 
 There is also a \`.spacing-vertical-flow\` utility class that will add a margin-top of 1em to all direct child elements which creates a good visual hierarchy especially when mixing headings and paragraphs in a section <br>_(except for \`:first-child\` element or elements with \`.absolute\`)_ 
 
-### CSS Variable
+#### _CSS Variable_
 To pick a relative spacing use \`var(--spacing-relative-XXX)\` <br>And to pick a root spacing use \`var(--spacing-root-XXX)\` 
 _(where \`XXX\` is the weight you want to use)_
 `
@@ -100,27 +97,22 @@ We follow the CUBE CSS methodology when writing our styles
 
 CUBE CSS stands for:
 
-### Composition
-
+#### _Composition_
 Global styles and higher level component styling, like the layer name suggest this is where you define the composition of the page
 
-### Utility
-
+#### _Utility_
 Utility classes similar to how Tailwind and Atom methodology define all of their classes, these classes directive in life is to do one thing and that thing very well
 
 
-### Block
-
+#### _Block_
 Styling inside to a specific component, at this point Composition and Utility layers should have defined most of cases so these styles are very specific to the component
 
 
-### Exception
-
+#### _Exception_
 The one-off styles for specific states, these are defined with any \`[data-*]\` attribute selector, usually triggered by events like setting \`[data-dark-mode="true"]\`
 
 
-### CSS (Layers)
-
+#### _CSS_
 Using this though process of layers means that we use the cascading nature of CSS unlike many other methodologies, we think that CUBE CSS takes the best parts of other methodologies and combines them into one cohesive system
 
 _[Read more in more detail about CUBE CSS](https://cube.fyi/)_
