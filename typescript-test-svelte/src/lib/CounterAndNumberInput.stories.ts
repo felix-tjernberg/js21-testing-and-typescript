@@ -6,7 +6,7 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 type Story = StoryObj<CounterAndNumberInput>
 
 const meta: Meta<CounterAndNumberInput> = {
-  title: 'Components/Composition/CounterAndNumberInput',
+  title: 'Compositions/CounterAndNumberInput',
   component: CounterAndNumberInput,
   tags: ['docsPage'],
   parameters: {

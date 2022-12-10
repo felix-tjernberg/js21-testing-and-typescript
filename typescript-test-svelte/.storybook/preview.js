@@ -12,12 +12,7 @@ export const parameters = {
   viewport: customViewports,
   options: {
     storySort: {
-      order: [
-        'Design System',
-        'Pages',
-        'Components',
-        ['Components/Basic', 'Components/Composition']
-      ]
+      order: ['Design System', 'Pages', 'Compositions', 'Components']
     }
   }
 }

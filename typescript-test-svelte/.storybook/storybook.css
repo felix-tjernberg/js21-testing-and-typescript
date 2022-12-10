@@ -1,6 +1,3 @@
-.sb-show-main:not(:has(.storybook-docs)) {
-  overflow: hidden;
-}
 .sb-show-main.sb-main-padded {
   padding: 0;
 }

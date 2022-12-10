@@ -63,12 +63,12 @@ Or we could wrap the paragraf in a section with the class \`.width-fit-content-a
 To pick a font size use \`var(--font-size-XXX)\` <br>_(where \`XXX\` is the weight you want to use)_
 `
 const BORDERS_DOC_STRING = `
-Borders and strokes doubles in width for every weight step with the base (300) of 4px
-- 100: 1px
-- 200: 2px
-- 300: 4px
-- 400: 8px
-- 500: 16px
+Borders and strokes doubles in width for every weight step with the base \`300\` of \`4px\`
+- 100 \`1px\`
+- 200 \`2px\`
+- 300 \`4px\`
+- 400 \`8px\`
+- 500 \`16px\`
 
 ### CSS Variable
 To pick a border use \`var(--stroke-XXX)\` <br>_where \`XXX\` is the weight you want to use_
@@ -111,7 +111,7 @@ Utility classes similar to how Tailwind and Atom methodology define all of their
 
 ### Block
 
-Styling inside to a specific component, at this point C/U layers should have defined most of the styles so this layer should be very small
+Styling inside to a specific component, at this point Composition and Utility layers should have defined most of cases so these styles are very specific to the component
 
 
 ### Exception
@@ -121,7 +121,9 @@ The one-off styles for specific states, these are defined with any \`[data-*]\` 
 
 ### CSS (Layers)
 
-Using this though process of layers means that we use the cascading nature of CSS unlike many other methodologies, we think that CUBE CSS takes the best parts of other methodologies and combines them into one cohesive system if you want more detail [read more about CUBE CSS](https://cube.fyi/)
+Using this though process of layers means that we use the cascading nature of CSS unlike many other methodologies, we think that CUBE CSS takes the best parts of other methodologies and combines them into one cohesive system
+
+_[Read more in more detail about CUBE CSS](https://cube.fyi/)_
 `
 
 const meta: Meta<DesignSystemPage> = {
