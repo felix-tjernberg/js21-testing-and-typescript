@@ -5,7 +5,8 @@ const VALUES = [
   'typography',
   'spacing',
   'borders',
-  'icons'
+  'icons',
+  'cube'
 ] as const
 export const Section = z.enum(VALUES)
 export type Section = z.infer<typeof Section>

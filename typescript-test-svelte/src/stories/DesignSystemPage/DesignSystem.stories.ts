@@ -47,6 +47,34 @@ Spacing
 const ICONS_DOC_STRING = `
 Icons
 `
+const CSS_STYLING_GUIDE = `
+We follow the CUBE CSS methodology when writing our styles
+
+CUBE CSS stands for:
+
+### Composition
+
+Global styles and higher level component styling, like the layer name suggest this is where you define the composition of the page
+
+### Utility
+
+Utility classes similar to how Tailwind and Atom methodology define all of their classes, these classes directive in life is to do one thing and that thing very well
+
+
+### Block
+
+Styling inside to a specific component, at this point C/U layers should have defined most of the styles so this layer should be very small
+
+
+### Exception
+
+The one-off styles usually defined with attribute selector and are usually triggered by events like \`[darkmode="true"]\`
+
+
+### CSS (Layers)
+
+Using this though process of layers means that we use the cascading nature of CSS unlike many other methodologies, we think that CUBE CSS takes the best parts of other methodologies and combines them into one cohesive system if you want more detail [read more about CUBE CSS](https://cube.fyi/)
+`
 
 const meta: Meta<DesignSystemPage> = {
   component: DesignSystemPage,
@@ -137,6 +165,19 @@ Story6.parameters = {
   docs: {
     description: {
       story: ICONS_DOC_STRING
+    }
+  }
+}
+export const Story7: Story = {
+  args: {
+    section: Section.enum.icons
+  }
+}
+Story7.storyName = 'CSS Styling Guide'
+Story7.parameters = {
+  docs: {
+    description: {
+      story: CSS_STYLING_GUIDE
     }
   }
 }

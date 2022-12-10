@@ -5,6 +5,7 @@
   import Border from './Border.svelte'
   import Icons from './Icons.svelte'
   import Spacing from './Spacing.svelte'
+  import Cube from './Cube.svelte'
 
   import { Section } from './DesignSystemPage.enum'
   import type { Section as SectionType } from './DesignSystemPage.enum'
@@ -23,6 +24,8 @@
         return Icons
       case Section.enum.spacing:
         return Spacing
+      case Section.enum.cube:
+        return Cube
       default:
         return Overview
     }
