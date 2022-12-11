@@ -19,7 +19,7 @@
   position: relative;
 }
 .gap-300 {
-  gap: var(--spacing-relative-100);
+  gap: var(--spacing-relative-300);
 }
 .gap-600 {
   gap: var(--spacing-relative-600);
