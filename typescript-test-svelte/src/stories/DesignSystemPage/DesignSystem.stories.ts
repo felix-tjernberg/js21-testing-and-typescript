@@ -68,7 +68,7 @@ Borders and strokes doubles in width for every weight step with the base \`300\`
 - 500 \`16px\`
 
 #### _CSS Variable_
-To pick a border use \`var(--stroke-XXX)\` <br>_where \`XXX\` is the weight you want to use_
+To pick a border use \`var(--stroke-XXX)\` <br>(_where \`XXX\` is the weight you want to use_)
 `
 const SPACING_DOC_STRING = `
 Spacing kan be defined either with relative spacing or root spacing and follows the same sizes and weights as the type scale
@@ -90,7 +90,9 @@ To pick a relative spacing use \`var(--spacing-relative-XXX)\` <br>And to pick a
 _(where \`XXX\` is the weight you want to use)_
 `
 const ICONS_DOC_STRING = `
-Icons
+Because we use svelte we can rename \`.svg\` files to \`.svelte\` files instead and import them directly into our components, we have also added \`class={$$props.class}\` to the svg element which means we can style icons with css classes
+
+We also provide a \`Icons.svelte\` component that you can give the name of the icon you want to use. There is also an accompanying zod enum \`IconNames\` in \`Icons.enum.ts\` that you have to use to get the code completion and correct name of the icon
 `
 const CSS_STYLING_GUIDE = `
 We follow the CUBE CSS methodology when writing our styles
@@ -212,7 +214,7 @@ Story6.parameters = {
 }
 export const Story7: Story = {
   args: {
-    section: Section.enum.icons
+    section: Section.enum.cube
   }
 }
 Story7.storyName = 'CSS Styling Guide'
