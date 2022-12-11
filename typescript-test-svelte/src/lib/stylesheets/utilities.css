@@ -2,6 +2,7 @@
 .flex-column {
   display: flex;
 }
+.flex-column,
 .column {
   flex-direction: column;
 }
@@ -10,6 +11,15 @@
 }
 .items-center {
   align-items: center;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.gap-300 {
+  gap: var(--spacing-relative-100);
 }
 .gap-600 {
   gap: var(--spacing-relative-600);
@@ -79,7 +89,7 @@ svg {
 .font-size-600 {
   font-size: var(--font-size-600);
 }
-svg path {
+[data-is-icon] path {
   fill: var(--color-100);
   stroke: var(--color-500);
   stroke-width: var(--stroke-500);

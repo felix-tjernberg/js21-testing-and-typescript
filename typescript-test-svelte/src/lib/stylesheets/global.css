@@ -13,7 +13,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  border: none !important;
+  border: none;
 }
 
 p {
