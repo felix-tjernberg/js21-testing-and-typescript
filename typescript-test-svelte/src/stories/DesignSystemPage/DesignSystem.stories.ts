@@ -90,7 +90,16 @@ To pick a relative spacing use \`var(--spacing-relative-XXX)\` <br>And to pick a
 _(where \`XXX\` is the weight you want to use)_
 `
 const ICONS_DOC_STRING = `
-Because we use svelte we can rename \`.svg\` files to \`.svelte\` files instead and import them directly into our components, we have also added \`class={$$props.class}\` to the svg element which means we can style icons with css classes
+The default settings for icons are
+- Height \`1em\`
+- Width \`1em\`
+- Fill \`var(--color-100)\`
+- Stroke \`var(--color-500)\`
+- Stroke-width \`var(--stroke-500)\`
+
+Height and width should be changed with font-size to keep a good visual hierarchy
+
+Because svelte is our frontend framework we have renamed \`.svg\` files to \`.svelte\` as that gives us the flexibility of importing icons directly in components, we have also added \`class={$$props.class}\` to the svg element which means we can style icons with css classes to overide the default settings
 
 We also provide a \`Icons.svelte\` component that you can give the name of the icon you want to use. There is also an accompanying zod enum \`IconNames\` in \`Icons.enum.ts\` that you have to use to get the code completion and correct name of the icon
 `
