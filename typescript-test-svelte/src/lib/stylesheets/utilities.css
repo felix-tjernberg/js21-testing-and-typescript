@@ -64,3 +64,23 @@
 .font-size-reduce-5 {
   font-size: calc((1em * 0.25) * 5);
 }
+.stroke-100,
+svg.stroke-100 > * {
+  stroke-width: var(--stroke-100);
+}
+.stroke-500,
+svg.stroke-500 > * {
+  stroke-width: var(--stroke-500);
+}
+svg {
+  height: 1em;
+  width: 1em;
+}
+.font-size-600 {
+  font-size: var(--font-size-600);
+}
+svg path {
+  fill: var(--color-100);
+  stroke: var(--color-500);
+  stroke-width: var(--stroke-500);
+}
