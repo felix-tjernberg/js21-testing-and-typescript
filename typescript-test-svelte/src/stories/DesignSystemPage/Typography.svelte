@@ -29,9 +29,9 @@
         quibusdam repudiandae, voluptas aperiam officiis dignissimos recusandae?
       </p>
     </section>
-    <p style="font-size: var(--font-size-400)">
-      This is a very long heading too show what happens if you do not limit the
-      section to 50ch width
+    <p style="font-size: var(--font-size-400); max-width:100%">
+      This is what happens if you limit the paragraf but not the heading to 50ch
+      width
     </p>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
@@ -42,8 +42,8 @@
       officia maiores amet omnis quidem, vitae mollitia ab reprehenderit odio
       quibusdam repudiandae, voluptas aperiam officiis dignissimos recusandae?
     </p>
-    <p style="font-size: var(--font-size-400)">
-      Text below is an example of max-width-100 class
+    <p style="font-size: var(--font-size-400); max-width:100%">
+      This is and example of when you do not a section 50ch width
     </p>
     <p class="max-width-100">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
