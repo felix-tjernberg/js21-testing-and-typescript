@@ -31,6 +31,7 @@
 .spacing-vertical-flow > *:not(:first-child),
 .spacing-vertical-flow > *:not(.absolute) {
   margin-top: 1em;
+  margin-bottom: 0;
 }
 .width-fit-content {
   width: fit-content;
@@ -41,7 +42,7 @@
 .text-center {
   text-align: center;
 }
-.text-full-width {
+.max-width-100 {
   max-width: 100%;
 }
 .font-size-enlarge {
@@ -82,15 +83,6 @@ svg.stroke-100 > * {
 svg.stroke-500 > * {
   stroke-width: var(--stroke-500);
 }
-svg {
-  height: 1em;
-  width: 1em;
-}
 .font-size-600 {
   font-size: var(--font-size-600);
-}
-[data-is-icon] path {
-  fill: var(--color-100);
-  stroke: var(--color-500);
-  stroke-width: var(--stroke-500);
 }

@@ -14,6 +14,7 @@ body {
   -webkit-text-size-adjust: 100%;
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   border: none;
+  margin: 0;
 }
 
 p {
@@ -76,4 +77,13 @@ input:focus,
 input:focus-visible button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+svg {
+  height: 1em;
+  width: 1em;
+}
+[data-is-icon] path {
+  fill: var(--color-100);
+  stroke: var(--color-500);
+  stroke-width: var(--stroke-500);
 }

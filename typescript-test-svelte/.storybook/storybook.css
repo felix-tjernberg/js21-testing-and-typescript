@@ -1,17 +1,26 @@
-.sb-show-main.sb-main-padded {
-  padding: 0;
+.sbdocs h1,
+.sbdocs h2,
+.sbdocs h3,
+.sbdocs h4 {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
 }
-
-#storybook-docs .root-container {
-  display: flex;
-  place-content: center;
-  height: auto;
-  width: auto;
+.sbdocs h3,
+.sbdocs h3 *,
+.sbdocs h4,
+.sbdocs h4 * {
+  font-weight: bold;
 }
-
-.root-container {
-  display: grid;
-  place-content: center;
-  height: 100vh;
-  width: 100vw;
+.sbdocs h3 {
+  font-size: 26px;
+}
+.sbdocs h3:first-of-type {
+  margin-top: 4em;
+}
+.sbdocs h4 {
+  font-size: 20px;
+}
+.sbdocs h3 a {
+  padding-right: 0;
+  margin-right: -26px;
 }
