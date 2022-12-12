@@ -24,14 +24,14 @@ Story1.play = async ({ canvasElement }) => {
   const buttons = await canvas.getAllByRole('button')
   const numberInput = (await canvas.getByRole('spinbutton')) as HTMLInputElement
 
+  // Check starting values
   await await STARTING_BUTTON_VALUES.forEach(async (value, index) => {
     await expect(buttons[index].textContent).toBe(`count is ${value}`)
   })
   await expect(numberInput.value).toBe(`${STARTING_INPUT_VALUE}`)
 
+  // Click buttons and check final values
   await await NUMBER_OF_CLICKS.forEach(async (clicks, index) => {
-    console.log(clicks, buttons[index])
-
     for (let i = 0; i < clicks; i++) {
       await userEvent.click(buttons[index])
     }
@@ -40,5 +40,6 @@ Story1.play = async ({ canvasElement }) => {
     )
   })
 
-  await expect(numberInput.value).toBe('1')
+  // Check final number input value
+  await expect(numberInput.value).toBe(EXPECTED_FINAL_NUMBERS[0].toString())
 }
