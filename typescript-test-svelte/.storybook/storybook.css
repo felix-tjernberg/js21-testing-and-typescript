@@ -24,3 +24,6 @@
   padding-right: 0;
   margin-right: -26px;
 }
+.sbdocs.sbdocs-h3 + div p {
+  margin-top: 1em;
+}
