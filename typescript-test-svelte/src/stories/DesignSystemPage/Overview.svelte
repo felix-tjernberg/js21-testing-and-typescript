@@ -9,7 +9,7 @@
 <div class="flex-column justify-center items-center gap-300">
   <Colors overview={true} />
   <Typography overview={true} />
-  <Border overview={true} />
+  <Border />
   <Spacing />
   <Icons />
 </div>

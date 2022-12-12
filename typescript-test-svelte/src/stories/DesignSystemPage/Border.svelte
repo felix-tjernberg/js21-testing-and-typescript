@@ -1,21 +1,26 @@
-<script lang="ts">
-  export let overview: boolean = false
-</script>
-
 <div class="flex-column spacing-vertical-flow width-fit-content">
   {#each [100, 200, 300, 400, 500] as weight}
-    <div class="flex-column items-center">
-      {#if !overview}
-        <p style="line-height:1; text-align:center">{weight}</p>{/if}
+    <div class="relative">
+      <p style="line-height:1; text-align:center">{weight}</p>
       <div
-        style={`border-top: var(--stroke-${weight}) solid var(--color-300);`}
+        class="absolute"
+        style={`border-top: var(--stroke-${weight}) solid var(--color-500);`}
       />
     </div>
   {/each}
 </div>
 
 <style>
-  div.flex-column.items-center > div {
+  p {
+    background-color: #fff;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .absolute {
     width: 100px;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
   }
 </style>
