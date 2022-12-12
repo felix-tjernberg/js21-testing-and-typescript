@@ -14,6 +14,13 @@ const meta: Meta<NumberInput> = {
         component: 'Number input element'
       }
     }
+  },
+  argTypes: {
+    value: {
+      control: {
+        type: 'number'
+      }
+    }
   }
 }
 export default meta

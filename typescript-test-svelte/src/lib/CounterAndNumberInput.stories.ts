@@ -1,7 +1,5 @@
 import CounterAndNumberInput from './CounterAndNumberInput.svelte'
 
-import { expect } from '@storybook/jest'
-import { userEvent, within } from '@storybook/testing-library'
 import type { Meta, StoryObj } from '@storybook/svelte'
 type Story = StoryObj<CounterAndNumberInput>
 

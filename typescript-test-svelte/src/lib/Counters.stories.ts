@@ -20,11 +20,15 @@ const meta: Meta<Counters> = {
 }
 export default meta
 
-export const DefaultState: Story = {}
+export const DefaultState: Story = {
+  args: {
+    buttonsInitialValues: [1, 2, 3]
+  }
+}
 
 export const Story1: Story = {
   args: {
-    buttons: [{ count: 3 }, { count: 2 }, { count: 3 }]
+    buttonsInitialValues: [3, 2, 3]
   }
 }
 

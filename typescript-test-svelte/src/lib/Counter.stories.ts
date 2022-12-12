@@ -14,6 +14,13 @@ const meta: Meta<Counter> = {
         component: 'Button that increments and shows a counter'
       }
     }
+  },
+  argTypes: {
+    count: {
+      control: {
+        type: 'number'
+      }
+    }
   }
 }
 
