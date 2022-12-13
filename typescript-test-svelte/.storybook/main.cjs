@@ -8,8 +8,7 @@ module.exports = {
     '@storybook/addon-a11y'
   ],
   framework: {
-    name: '@storybook/svelte-vite',
-    options: {}
+    name: '@storybook/svelte-vite'
   },
   docs: {
     docsPage: true

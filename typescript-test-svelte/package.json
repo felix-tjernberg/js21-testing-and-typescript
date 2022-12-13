@@ -9,9 +9,11 @@
     "storybook": "storybook dev -p 6006",
     "storybook-tests-watch": "test-storybook --watch",
     "storybook-tests-once": "test-storybook",
-    "storybook-build": "storybook build"
+    "storybook-build": "storybook build",
+    "chromatic": "npx chromatic --project-token=77ea1d61fc3b --build-script-name storybook-build"
   },
   "devDependencies": {
+    "@babel/core": "^7.20.5",
     "@storybook/addon-essentials": "7.0.0-beta.4",
     "@storybook/addon-interactions": "7.0.0-beta.4",
     "@storybook/addon-links": "7.0.0-beta.4",
@@ -22,6 +24,9 @@
     "@storybook/testing-library": "^0.0.13",
     "@sveltejs/vite-plugin-svelte": "^1.4.0",
     "@tsconfig/svelte": "^3.0.0",
+    "chromatic": "^6.12.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rollup": "^3.7.4",
     "storybook": "7.0.0-beta.4",
     "svelte": "^3.54.0",
