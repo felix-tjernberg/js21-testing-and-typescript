@@ -35,11 +35,4 @@
   p {
     margin: 0;
   }
-  p.header {
-    font-size: var(--font-size-400);
-    margin-bottom: var(--spacing-relative-200);
-  }
-  p.header:nth-of-type(2) {
-    margin-top: var(--spacing-relative-600);
-  }
 </style>
