@@ -10,12 +10,16 @@ jobs:
         with:
           node-version: '16.x'
       - name: Install dependencies
+        working-directory: ./typescript-test-svelte
         run: yarn
       - name: Install Playwright
+        working-directory: ./typescript-test-svelte
         run: npx playwright install --with-deps
       - name: Build Storybook
+        working-directory: ./typescript-test-svelte
         run: yarn build-storybook --quiet
       - name: Serve Storybook and run tests
+        working-directory: ./typescript-test-svelte
         run: |
           npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
             "npx http-server storybook-static --port 6006 --silent" \
