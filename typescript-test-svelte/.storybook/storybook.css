@@ -27,3 +27,8 @@
 .sbdocs.sbdocs-h3 + div p {
   margin-top: 1em;
 }
+
+html,
+body {
+  background-color: #fff;
+}

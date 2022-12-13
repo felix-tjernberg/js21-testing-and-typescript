@@ -13,7 +13,7 @@
 
 <style>
   .absolute {
-    background-color: #fff;
+    background-color: var(--color-100);
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     top: 50%;

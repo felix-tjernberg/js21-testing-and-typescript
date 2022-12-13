@@ -2,7 +2,6 @@
   export let overview: boolean = false
 </script>
 
-{#if !overview}<p class="text-center text-full-width header">Light mode</p>{/if}
 <div class="flex justify-center gap-600">
   {#each [100, 150, 200, 300, 400, 450, 500] as weight}
     <div
@@ -10,19 +9,7 @@
       data-overview={overview}
       style="background-color: var(--color-{weight});"
     >
-      {#if !overview}<p class="description-text">{weight}</p>{/if}
-    </div>
-  {/each}
-</div>
-{#if !overview}<p class="text-center text-full-width header">Dark mode</p>{/if}
-<div data-dark-mode="true" class="flex justify-center gap-600">
-  {#each [100, 150, 200, 300, 400, 450, 500] as weight}
-    <div
-      class="circle"
-      style="background-color: var(--color-{weight})"
-      data-overview={overview}
-    >
-      {#if !overview}<p class="description-text">{weight}</p>{/if}
+      <p class="description-text">{weight}</p>
     </div>
   {/each}
 </div>

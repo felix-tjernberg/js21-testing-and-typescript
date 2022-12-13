@@ -61,23 +61,32 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: var(--color-300);
+  background-color: var(--color-400);
   cursor: pointer;
   color: var(--color-100);
   transition: border-color 0.25s;
 }
-input:hover {
-  background-color: var(--color-150);
+@media (prefers-color-scheme: dark) {
+  button {
+    background-color: var(--color-500);
+  }
+}
+[data-dark-mode='true'] button {
+  background-color: var(--color-500);
+}
+button:hover {
+  background-color: var(--color-450);
 }
 
-button:hover {
-  background-color: var(--color-400);
+input:hover {
+  background-color: var(--color-150);
 }
 input:focus,
 input:focus-visible button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
 svg {
   height: 1em;
   width: 1em;
