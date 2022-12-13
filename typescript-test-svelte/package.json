@@ -33,6 +33,7 @@
     "vite": "^3.2.3"
   },
   "dependencies": {
-    "@storybook/test-runner": "^0.9.1"
+    "@storybook/test-runner": "^0.9.1",
+    "zod": "^3.20.2"
   }
 }
