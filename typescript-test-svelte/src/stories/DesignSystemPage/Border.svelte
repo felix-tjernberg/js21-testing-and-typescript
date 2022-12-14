@@ -19,5 +19,6 @@
     top: 50%;
     left: 50%;
     translate: -50% -50%;
+    border-radius: 30px;
   }
 </style>
