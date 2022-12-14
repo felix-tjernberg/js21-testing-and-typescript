@@ -5,9 +5,6 @@ on: push
 jobs:
   chromatic-deployment:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./typescript-test-svelte
     steps:
       - uses: actions/checkout@v1
       - name: Install dependencies
@@ -17,3 +14,4 @@ jobs:
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           exitZeroOnChanges: true
+          working-directory: './typescript-test-svelte'
