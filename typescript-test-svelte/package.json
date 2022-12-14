@@ -10,7 +10,7 @@
     "storybook-tests-watch": "test-storybook --watch",
     "storybook-tests-once": "test-storybook",
     "storybook-build": "storybook build",
-    "chromatic": "npx chromatic --project-token=77ea1d61fc3b --build-script-name storybook-build"
+    "chromatic": "chromatic --project-token=CHROMATIC_PROJECT_TOKEN --build-script-name storybook-build --exit-zero-on-changes"
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",
