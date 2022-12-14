@@ -31,7 +31,7 @@
 
 <style>
   .circle {
-    padding: 20px;
+    padding: 10px;
     border-radius: 50%;
   }
 </style>
