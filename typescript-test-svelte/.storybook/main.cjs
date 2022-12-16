@@ -5,7 +5,8 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
     '@storybook/jest',
-    '@storybook/addon-a11y'
+    '@storybook/addon-a11y',
+    'storybook-addon-designs'
   ],
   framework: {
     name: '@storybook/svelte-vite'

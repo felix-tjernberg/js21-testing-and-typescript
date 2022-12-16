@@ -1,5 +1,6 @@
 import Counter from './Counter.svelte'
 
+import { withDesign } from 'storybook-addon-designs'
 import { expect } from '@storybook/jest'
 import type { Meta, StoryObj } from '@storybook/svelte'
 type Story = StoryObj<Counter>
@@ -8,11 +9,16 @@ const meta: Meta<Counter> = {
   title: 'Components/Counter',
   component: Counter,
   tags: ['docsPage'],
+  decorators: [withDesign],
   parameters: {
     docs: {
       description: {
         component: 'Button that increments and shows a counter'
       }
+    },
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/proto/D4ytlSaO41unhZYevTXGUQ/Untitled?node-id=2%3A7&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=2%3A7'
     }
   },
   argTypes: {
